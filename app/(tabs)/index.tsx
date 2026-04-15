@@ -1,47 +1,56 @@
-import React from "react";
-import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
-
-
+import { Image, Text, TouchableOpacity, View } from "react-native";
 import { styles } from "./style";
 
-
-export default function App() {
+export default function HomeScreen() {
   return (
     <View style={styles.container}>
+
       {/* HEADER */}
       <View style={styles.header}>
-      <Image source={require("../../assets/images/logo.png")} style={styles.logo} />
-        <Text style={styles.headerTitle}>App SEDUC </Text>
+        <Image
+          source={require("../../assets/images/foto.png")} // coloque sua imagem aqui
+          style={styles.logo}
+        />
+        <Text style={styles.title}>Painel SEDUC</Text>
       </View>
 
-      {/* MENU */}
-      <View style={styles.menu}>
-        <Text style={styles.menuItem}>Home</Text>
-        <Text style={styles.menuItem}>Perfil</Text>
-        <Text style={styles.menuItem}>Config</Text>
+      {/* CARDS */}
+      <View style={styles.grid}>
+        <View style={styles.card}>
+          <Text style={styles.number}>12</Text>
+          <Text style={styles.label}>Aulas</Text>
+        </View>
+
+        <View style={styles.card}>
+          <Text style={styles.number}>30</Text>
+          <Text style={styles.label}>Alunos</Text>
+        </View>
+
+        <View style={styles.card}>
+          <Text style={styles.number}>5</Text>
+          <Text style={styles.label}>Projetos</Text>
+        </View>
+
+        <View style={styles.card}>
+          <Text style={styles.number}>2</Text>
+          <Text style={styles.label}>Pendentes</Text>
+        </View>
       </View>
 
-      {/* CONTEÚDO */}
-      <ScrollView style={styles.content}>
-        <Text style={styles.title}> Bem-vindo 🧑‍🎓</Text>
+      {/* BOTÕES */}
+      <TouchableOpacity style={styles.btnPrimary}>
+        <Text style={styles.btnText}>📊 Conteúdos</Text>
+      </TouchableOpacity>
 
-        {/* CARD 1 */}
-        <View style={styles.card}>
-          <Text style={styles.cardTitle}>Aula React Native</Text>
-          <Text>Aprendendo a criar layouts modernos</Text>
-        </View>
+      <TouchableOpacity style={styles.btnSecondary}>
+        <Text style={styles.btnTextDark}>⚙️ Configurações</Text>
+      </TouchableOpacity>
 
-        {/* CARD 2 */}
-        <View style={styles.card}>
-          <Text style={styles.cardTitle}> Aula 1</Text>
-          <Text>Layouts Modernos </Text>
-        </View>
+      <TouchableOpacity style={styles.btnGradient}>
+        <Text style={styles.btnText}>Ver Detalhes</Text>
+      </TouchableOpacity>
 
-        {/* BOTÃO */}
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Clique aqui</Text>
-        </TouchableOpacity>
-      </ScrollView>
     </View>
   );
 }
+

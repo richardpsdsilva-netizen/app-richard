@@ -4,79 +4,88 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f2f2f2",
+    backgroundColor: "#f2f4f7",
+    padding: 20,
+    justifyContent: "center",
   },
 
   /* HEADER */
   header: {
-    backgroundColor: "#6200ee",
-    paddingTop: 20,
-    paddingBottom: 20,
+    flexDirection: "row",
     alignItems: "center",
+    marginBottom: 20,
   },
 
   logo: {
-    width: 60,
-    height: 60,
-    marginBottom: 10,
-  },
-
-  headerTitle: {
-    color: "#fff",
-    fontSize: 20,
-    fontWeight: "bold",
-  },
-
-  /* MENU */
-  menu: {
-    flexDirection: "row",
-    justifyContent: "space-around",
-    backgroundColor: "#3700b3",
-    paddingVertical: 10,
-  },
-
-  menuItem: {
-    color: "#fff",
-    fontWeight: "bold",
-  },
-
-  /* CONTEÚDO */
-  content: {
-    padding: 20,
+    width: 32,
+    height: 32,
+    marginRight: 10,
+    borderRadius: 8,
   },
 
   title: {
     fontSize: 22,
     fontWeight: "bold",
-    marginBottom: 20,
   },
 
-  /* CARD */
+  /* GRID */
+  grid: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
+  },
+
   card: {
+    width: "48%",
     backgroundColor: "#fff",
-    padding: 15,
-    borderRadius: 10,
+    padding: 20,
+    borderRadius: 15,
     marginBottom: 15,
-    elevation: 3, // sombra Android
+    alignItems: "center",
   },
 
-  cardTitle: {
-    fontSize: 18,
+  number: {
+    fontSize: 22,
+    color: "#2f80ed",
     fontWeight: "bold",
-    marginBottom: 5,
   },
 
-  /* BOTÃO */
-  button: {
-    backgroundColor: "#6200ee",
+  label: {
+    color: "#777",
+  },
+
+  /* BOTÕES */
+  btnPrimary: {
+    backgroundColor: "#2f80ed",
     padding: 15,
     borderRadius: 10,
+    marginTop: 10,
     alignItems: "center",
-    marginTop: 20,
   },
 
-  buttonText: {
+  btnSecondary: {
+    backgroundColor: "#e5e7eb",
+    padding: 15,
+    borderRadius: 10,
+    marginTop: 10,
+    alignItems: "center",
+  },
+
+  btnGradient: {
+    backgroundColor: "#7b00ff",
+    padding: 15,
+    borderRadius: 10,
+    marginTop: 10,
+    alignItems: "center",
+  },
+
+  btnText: {
     color: "#fff",
+    fontWeight: "bold",
+  },
+
+  btnTextDark: {
+    color: "#333",
     fontWeight: "bold",
   },
 });
